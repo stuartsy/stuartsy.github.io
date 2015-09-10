@@ -10,16 +10,17 @@ html {
 
 @media(min-width:767px) {
     .navbar {
-        padding: 10px 0;
+        /*padding: 10px 0;*/
         /*border: none;*/
-        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out, border ease-in-out .5s;
-        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out, border ease-in-out .5s;
-        transition: background .5s ease-in-out,padding .5s ease-in-out, border ease-in-out .5s;
+        -webkit-transition: all ease-in-out .5s;
+        -moz-transition: all ease-in-out .5s;
+        transition: all ease-in-out .5s;
     }
 
     .top-nav-collapse {
-        border: 1px solid #ddd;
-        padding: 0;
+        /*border: 1px solid #ddd;*/
+        /*padding: 0;*/
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px;
     }
 }
 
@@ -42,7 +43,9 @@ html {
 /* NAVBAR STUFF */
 
 #navbar-main {
-    background: white;
+    /*background: white;*/
+    border: none;
+    background-color: rgba(255, 255, 255, 0.952941);
 }
 
 .navbar .nav > .active {
