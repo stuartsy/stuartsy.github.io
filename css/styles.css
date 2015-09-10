@@ -10,7 +10,7 @@ html {
 
 @media(min-width:767px) {
     .navbar {
-        /*padding: 10px 0;*/
+        padding: 10px 0;
         /*border: none;*/
         -webkit-transition: all ease-in-out .5s;
         -moz-transition: all ease-in-out .5s;
@@ -19,7 +19,7 @@ html {
 
     .top-nav-collapse {
         /*border: 1px solid #ddd;*/
-        /*padding: 0;*/
+        padding: 0;
         box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px;
     }
 }
