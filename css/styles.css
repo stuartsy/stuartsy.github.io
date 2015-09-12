@@ -25,7 +25,7 @@ html {
 }
 
 #name {
-    font-size: 3em;
+    font-size: 3.3em;
     font-family: "Lato", sans-serif;
     font-weight: 300;
     letter-spacing: .1em;
@@ -34,8 +34,8 @@ html {
 
 #shuffle {
     font-size: 2.5em;
-    font-family: "Open Sans Condensed", "Lato", sans-serif;
-    font-weight: 500;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
     color: #888;
     /*letter-spacing: .1em;*/
 }
@@ -58,6 +58,15 @@ html {
     background: red;
 }
 
+.navbar-default .navbar-nav > li > a {
+    padding: 20px;
+    color: black;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+    color: #aaa;
+}
+
 #navbar-main .navbar-nav > .active > a, 
 #navbar-main .navbar-nav > .active > a:hover, 
 #navbar-main .navbar-nav > .active > a:focus {
@@ -74,7 +83,17 @@ html {
     transition: width .5s ease, background-color .5s ease;
 }
 
+.page-scroll {
+    font-size: 15px;
+    font-weight: 300;
+    color: black;
+}
 
+.navbar-brand {
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 50px 20px 0;
+}
 
 /* END NAVBAR */
 
