@@ -23,7 +23,6 @@ $(function() {
 
     function setWords() {
         
-        console.log(shuffleCounter);
         shuffleCounter++;
 
         var text;
@@ -56,5 +55,50 @@ $(function() {
     $shuffleContainer.shuffleLetters()
 
     setInterval(setWords, 3000);
+
+    // set up the d3 distribution background
+    var canvas = d3.select("#distribution");
+
+
+    // var height = 600;
+    // var width = 1600;
+    var height = parseInt(canvas.style("height"));
+    var width = parseInt(canvas.style("width"));
+
+    canvas.attr('viewbox', '0 0 ' + width + ' ' + height);
+
+
+    var randomX = d3.random.normal(width / 2, 150); //normal distribution with mean width/2 and s.d. 100
+    var randomY = d3.random.normal(height / 2, 120);
+
+
+    var points = d3.range(2500).map(function() { return [randomX(), randomY()]; });
+
+
+    var color = d3.scale.linear()
+        .domain([0, 30])
+        .range(["white", "orange"])
+        .interpolate(d3.interpolateLab);
+
+    var hexbin = d3.hexbin()
+        .size([width, height])
+        .radius(20);
+
+    canvas.append("clipPath")
+        .attr("id", "clip")
+      .append("rect")
+        .attr("class", "mesh")
+        .attr("width", width)
+        .attr("height", height);
+
+    canvas.append("g")
+        .attr("clip-path", "url(#clip)")
+      .selectAll(".hexagon")
+        .data(hexbin(points))
+      .enter().append("path")
+        .attr("class", "hexagon")
+        .attr("d", hexbin.hexagon())
+        .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; })
+        .style("fill", function(d) { return color(d.length); });
 });
 

@@ -19,8 +19,13 @@
 		<link href="css/styles.css" rel="stylesheet">
 		<!-- lettter shuffle script --> 
 		<script src="js/shuffleLetters.js"></script>	
+		<!-- d3.js -->
+		<script src="js/d3.js"></script>
+		<!-- d3 hexbin plugin -->
+		<script src="js/hexbin.js"></script>
 		<!-- Custom JS -->
 		<script src="js/stuartweb.js"></script>
+
 
 
 
@@ -65,14 +70,14 @@
 
 	    <!-- Intro Section -->
 	    <section id="intro" class="intro-section">
-	        <div class="container">
-	            <div class="row">
-	                <div class="col-lg-12">
-	                    <h1 id="name">Stuart Sy</h1>
-	                    <h2 id="shuffle">Algorithms</h2>
-	                </div>
-	            </div>
+	    	<div id="intro-container">
+                <svg id="distribution"></svg>
+                <div id="intro-text">
+                	<h1 id="name">Stuart Sy</h1>
+                	<h2 id="shuffle">Algorithms</h2>
+                </div>
 	        </div>
+
 	    </section>
 
 	    <!-- About Section -->
