@@ -35,9 +35,9 @@ $(function() {
 
         var text;
 
-        switch (shuffleCounter % 3) {
+        switch (shuffleCounter % 5) {
             case 0:
-                text = "Algorithms";
+                text = "Web Dev";
                 //Statements executed when the result of expression matches value1
                 break;
             case 1:
@@ -45,9 +45,16 @@ $(function() {
                 //Statements executed when the result of expression matches value2
                 break;
             case 2:
-                text = "Web Development";
+                text = "Physics Jokes";
                 //Statements executed when the result of expression matches valueN
                 break;
+            case 3:
+                text = "Electronics Hacking";
+                //Statements executed when the result of expression matches valueN
+                break;
+            case 4:
+                text = "Wushu";
+                break;    
             default:
                 //Statements executed when none of the values match the value of the expression
                 break;
