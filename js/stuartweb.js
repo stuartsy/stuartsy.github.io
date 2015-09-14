@@ -15,7 +15,6 @@ $(function() {
 
     // Closes the Responsive Menu on Menu Item Click
     $('.navbar-collapse ul li a').click(function() {
-        console.log('click');
         $('.navbar-toggle:visible').click();
     });
 
@@ -92,8 +91,6 @@ $(function() {
 
     //add something to calculate density based on area - number of points
 
-    console.log(width);
-    console.log(height);
 
 
     var points = d3.range(2500).map(function() { return [randomX(), randomY()]; });
@@ -124,5 +121,54 @@ $(function() {
         .attr("d", hexbin.hexagon())
         .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; })
         .style("fill", function(d) { return color(d.length); });
+
+
+
+    setInterval(function() {
+        // updating the distribution
+        height = parseInt(canvas.style("height"));
+        width = parseInt(canvas.style("width"));
+
+        if(width > height) {
+            randomX = d3.random.normal(width / 2, width/10); //normal distribution with mean width/2 and s.d. 100
+            randomY = d3.random.normal(height / 2, height/5.5);
+        } else {
+            randomX = d3.random.normal(width / 2, width/5); //normal distribution with mean width/2 and s.d. 100
+            randomY = d3.random.normal(height / 2, height/10);
+        }
+
+        var newPoints = d3.range(2500).map(function() { return [randomX(), randomY()]; });
+
+        var bins = d3.selectAll(".hexagon")
+          .data(hexbin(newPoints), function(d) { return d.x + d.y; } );
+
+
+        bins.transition()
+          .duration(1000)
+          .delay(function(d, i) { return i * 30; })
+          .attr("d", hexbin.hexagon())
+          .style("fill", function(d) { return color(d.length); });
+
+        bins.enter().append("path")
+          .attr("class", "hexagon")
+          .attr("d", hexbin.hexagon())
+          .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; })
+          .style("fill", "white")
+            .transition()   
+            .duration(1000) 
+            .delay(function(d, i) { return i * 30; }) 
+          .style("fill", function(d) { return color(d.length); });
+
+        bins.exit()
+          .transition()
+            .duration(1000)
+            .delay(function(d, i) { return i * 30; })
+            .remove();
+
+
+    }, 3000);
+
+    
+
 });
 
