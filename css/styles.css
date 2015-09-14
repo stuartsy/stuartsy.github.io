@@ -9,17 +9,7 @@ html {
     height: 100%;
 }
 
-@media(max-width: 766px) {
-    .navbar-brand {
-        padding: 10px 20px;1
-        font-size: 20px !important;
-        font-weight: 100;
-    }
 
-    #intro-container {
-        padding-top: 50px !important;
-    }
-}
 
 @media(min-width:767px) {
     .navbar {
@@ -34,6 +24,11 @@ html {
         font-size: 20px;
         font-weight: 300;
         padding: 20px 50px 20px 0;
+    }
+
+    .navbar .nav > .active:after {
+        width: 100%;
+        background: red;
     }
 
     
@@ -74,10 +69,7 @@ html {
     background: none;
 }
 
-.navbar .nav > .active:after {
-    width: 100%;
-    background: red;
-}
+
 
 .navbar-default .navbar-nav > li > a {
     padding: 20px;
@@ -162,7 +154,7 @@ svg#distribution {
 
 .contact-section {
     height: 100%;
-    padding-top: 150px;
+    padding-top: 10%;
     text-align: center;
     background: rgb(255, 252, 248);
 }
@@ -210,4 +202,41 @@ svg#distribution {
 
 .fa-github:hover {
     color: #762B86;
+}
+
+@media(max-width: 766px) {
+    .navbar-brand {
+        padding: 10px 20px;1
+        font-size: 20px !important;
+        font-weight: 100;
+    }
+
+    #intro-container {
+        padding-top: 50px !important;
+    }
+
+    #name {
+        font-size: 2.4em;
+    }
+
+    #shuffle {
+        font-size: 2em;
+    }
+
+    #navbar-main {
+        background-color: rgba(255, 255, 255, 0.8);
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px;
+    }
+
+    .contact-section .heading {
+        font-size: 2.5em;
+    }
+
+    .contact-section .subheading {
+        font-size: 1.2em;
+    }
+
+    .email {
+        font-size: 20px;
+    }
 }

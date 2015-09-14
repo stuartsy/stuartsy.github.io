@@ -80,6 +80,7 @@ $(function() {
     var width = parseInt(canvas.style("width"));
 
     canvas.attr('viewbox', '0 0 ' + width + ' ' + height);
+    // canvas.attr('viewbox', '0 0 ' + 1600 + ' ' + 600);
 
     if(width > height) {
         var randomX = d3.random.normal(width / 2, width/10); //normal distribution with mean width/2 and s.d. 100
