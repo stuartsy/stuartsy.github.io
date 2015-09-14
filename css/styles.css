@@ -8,6 +8,14 @@ html {
     height: 100%;
 }
 
+@media(max-width: 766px) {
+    .navbar-brand {
+        padding: 10px 20px;
+        font-size: 20px !important;
+        font-weight: 100;
+    }
+}
+
 @media(min-width:767px) {
     .navbar {
         padding: 10px 0;
@@ -17,12 +25,20 @@ html {
         transition: all ease-in-out .5s;
     }
 
-    .top-nav-collapse {
-        /*border: 1px solid #ddd;*/
-        padding: 0;
-        box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px;
-        background-color: rgba(256,256,256, 0.8) !important;
+    .navbar-brand {
+        font-size: 20px;
+        font-weight: 300;
+        padding: 20px 50px 20px 0;
     }
+
+    
+}
+
+.top-nav-collapse {
+    /*border: 1px solid #ddd;*/
+    padding: 0;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px;
+    background-color: rgba(256,256,256, 0.8) !important;
 }
 
 #name {
@@ -51,7 +67,6 @@ html {
 
 .navbar .nav > .active {
     background: none;
-    /*border-bottom: 4px solid red;*/
 }
 
 .navbar .nav > .active:after {
@@ -90,11 +105,7 @@ html {
     color: black;
 }
 
-.navbar-brand {
-    font-size: 20px;
-    font-weight: 300;
-    padding: 20px 50px 20px 0;
-}
+
 
 /* END NAVBAR */
 
