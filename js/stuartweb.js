@@ -82,9 +82,18 @@ $(function() {
 
     canvas.attr('viewbox', '0 0 ' + width + ' ' + height);
 
+    if(width > height) {
+        var randomX = d3.random.normal(width / 2, width/10); //normal distribution with mean width/2 and s.d. 100
+        var randomY = d3.random.normal(height / 2, height/5.5);
+    } else {
+        var randomX = d3.random.normal(width / 2, width/5); //normal distribution with mean width/2 and s.d. 100
+        var randomY = d3.random.normal(height / 2, height/10);
+    }
 
-    var randomX = d3.random.normal(width / 2, 150); //normal distribution with mean width/2 and s.d. 100
-    var randomY = d3.random.normal(height / 2, 120);
+    //add something to calculate density based on area - number of points
+
+    console.log(width);
+    console.log(height);
 
 
     var points = d3.range(2500).map(function() { return [randomX(), randomY()]; });
