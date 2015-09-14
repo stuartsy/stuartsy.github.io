@@ -123,8 +123,10 @@ $(function() {
         .style("fill", function(d) { return color(d.length); });
 
 
+    updateDistribution();
+    setInterval(updateDistribution, 3000);
 
-    setInterval(function() {
+   function updateDistribution() {
         // updating the distribution
         height = parseInt(canvas.style("height"));
         width = parseInt(canvas.style("width"));
@@ -166,9 +168,7 @@ $(function() {
             .remove();
 
 
-    }, 3000);
-
-    
+    } 
 
 });
 
