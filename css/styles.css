@@ -30,7 +30,6 @@ html {
         width: 100%;
         background: red;
     }
-
     
 }
 
@@ -136,6 +135,24 @@ svg#distribution {
 #intro-text {
     position: relative;
     z-index: 2;
+}
+
+#bg-tip {
+    position: absolute;
+    bottom: 20px;
+    right: 50px;
+    z-index: 5;
+}
+
+#bg-tip:hover {
+    cursor: pointer;
+    color: blue;
+    text-decoration: none;
+}
+
+#bg-tip:focus {
+    outline: 0;
+    text-decoration: none;
 }
 
 .about-section {
