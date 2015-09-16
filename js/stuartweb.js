@@ -128,7 +128,7 @@ $(function() {
 
 
     updateDistribution();
-    setInterval(updateDistribution, 3000);
+    setInterval(updateDistribution, 5000);
 
    function updateDistribution() {
         // updating the distribution

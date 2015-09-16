@@ -140,7 +140,7 @@ svg#distribution {
 #bg-tip {
     position: absolute;
     bottom: 20px;
-    right: 50px;
+    right: 5%;
     z-index: 5;
 }
 
@@ -209,7 +209,7 @@ svg#distribution {
 }
 
 .fa-linkedin-square:hover {
-    color: blue;
+    color: #1A84BC;
     background: white;
 }
 
