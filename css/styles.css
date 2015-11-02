@@ -162,11 +162,26 @@ svg#distribution {
     background: rgb(255, 252, 248);
 }
 
+.about-section .description {
+    font-size: 15px;
+    padding-bottom: 40px;
+}
+
+img#me {
+    max-height: 400px;
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 60px;
+}
+
 .projects-section {
     height: 100%;
-    padding-top: 50px;
     text-align: center;
     background: #fff;
+}
+
+.projects-section h4 {
+    padding: 10px;
 }
 
 .contact-section {
