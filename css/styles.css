@@ -157,14 +157,14 @@ svg#distribution {
 
 .about-section {
     height: 100%;
-    padding-top: 150px;
+    padding-top: 50px;
     text-align: center;
     background: rgb(255, 252, 248);
 }
 
 .projects-section {
     height: 100%;
-    padding-top: 150px;
+    padding-top: 50px;
     text-align: center;
     background: #fff;
 }
@@ -176,7 +176,8 @@ svg#distribution {
     background: rgb(255, 252, 248);
 }
 
-.contact-section .heading {
+/*.contact-section .heading {*/
+.heading {
     font-family: "Lato";
     font-weight: 300;
     font-size: 4em;
